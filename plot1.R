@@ -2,7 +2,9 @@ wd <- '~/edu/ExploratoryDataAnalysis/ExData_Plotting1'
 setwd(wd)
 source('plot_get_dataset.R')
 
-power.consumption <- plot_get_dataset()
+if (!exists('power.consumption')) {
+  power.consumption <- plot_get_dataset()
+}
 
 # plot 1
 par(mfrow = c(1,1))
